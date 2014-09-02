@@ -1,0 +1,15 @@
+
+/* Class = "IBUILabel"; text = "Main Menu"; ObjectID = "LfK-uz-Q6O"; */
+"LfK-uz-Q6O.text" = "Main Menu";
+
+/* Class = "IBUIButton"; normalTitle = "Resume"; ObjectID = "Npj-hi-VDj"; */
+"Npj-hi-VDj.normalTitle" = "Resume";
+
+/* Class = "IBUIButton"; normalTitle = "Pause"; ObjectID = "UGH-6D-w0W"; */
+"UGH-6D-w0W.normalTitle" = "Pause";
+
+/* Class = "IBUIButton"; normalTitle = "Quit"; ObjectID = "pcd-5U-7hl"; */
+"pcd-5U-7hl.normalTitle" = "Quit";
+
+/* Class = "IBUIButton"; normalTitle = "Play"; ObjectID = "q3Z-Eo-Q5h"; */
+"q3Z-Eo-Q5h.normalTitle" = "Play";
