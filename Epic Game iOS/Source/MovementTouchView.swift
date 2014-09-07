@@ -21,7 +21,7 @@ class MovementTouchView: UIView {
     
     var delegate: MovementTouchViewDelegate?
     
-    required init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "panGestureRecognizerAction:")
@@ -44,7 +44,7 @@ class MovementTouchView: UIView {
             let location = recognizer.locationInView(recognizer.view)
             
             self.panBeginLocationIndicatorView.center = location
-            recognizer.view.addSubview(self.panBeginLocationIndicatorView)
+            recognizer.view?.addSubview(self.panBeginLocationIndicatorView)
             
             self.panLocationIndicatorView.center = location
             self.addSubview(self.panLocationIndicatorView)
@@ -52,7 +52,7 @@ class MovementTouchView: UIView {
         case UIGestureRecognizerState.Changed:
             let location = recognizer.locationInView(recognizer.view)
             
-            var translation: CGPoint = recognizer.translationInView(nil);
+            var translation: CGPoint = recognizer.translationInView(self);
             let length: CGFloat = translation.length()
             let maxLength: CGFloat = min(self.bounds.size.width, self.bounds.size.height)
             if length > maxLength {

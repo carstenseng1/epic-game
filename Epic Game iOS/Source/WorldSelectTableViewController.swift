@@ -43,7 +43,7 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
     
     // MARK: - CoreData
     func getFetchedResultController() -> NSFetchedResultsController {
-        fetchedResultController = NSFetchedResultsController(fetchRequest: worldFetchRequest(), managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController = NSFetchedResultsController(fetchRequest: worldFetchRequest(), managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
         return fetchedResultController
     }
     
@@ -55,40 +55,45 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-        // #warning Potentially incomplete method implementation.
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // Return the number of sections.
-        return fetchedResultController.sections.count
+        if (fetchedResultController.sections? != nil) {
+            let sections = fetchedResultController.sections!
+            return sections.count
+        }
+        return 0
     }
-
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         // Number of world models saved plus a cell to create a new world
-        let numberOfWorlds = fetchedResultController.sections[section].numberOfObjects
+        let sectionInfo: NSFetchedResultsSectionInfo = fetchedResultController.sections?[section] as NSFetchedResultsSectionInfo
+        let numberOfWorlds = sectionInfo.numberOfObjects
         self.editButtonItem().enabled = self.editing || numberOfWorlds > 0
         
         switch Game.sharedInstance.mode {
         case GameMode.Play:
-            return fetchedResultController.sections[section].numberOfObjects
+            return numberOfWorlds
         case GameMode.Edit:
             if tableView.editing {
-                return fetchedResultController.sections[section].numberOfObjects
+                return numberOfWorlds
             } else {
-                return fetchedResultController.sections[section].numberOfObjects + 1
+                return numberOfWorlds + 1
             }
         default:
             return 0
         }
     }
     
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var reuseIdentifier: String = "Cell"
         var text: String = ""
-
+        
         // Configure the cell...
-        if indexPath.row == fetchedResultController.sections[indexPath.section].numberOfObjects {
+        let sectionInfo: NSFetchedResultsSectionInfo = fetchedResultController.sections?[indexPath.section] as NSFetchedResultsSectionInfo
+        if indexPath.row == sectionInfo.numberOfObjects {
             reuseIdentifier = "New World Cell"
             text = "Create New (Empty World)"
         } else {
@@ -97,13 +102,13 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
         }
         
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel.text = text;
+        cell.textLabel?.text = text;
         
         return cell
     }
     
-    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)!
         
         if cell.reuseIdentifier == "New World Cell" {
             self.performSegueWithIdentifier("toCreateWorld", sender: cell)
@@ -115,10 +120,10 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
         }
     }
     
-    override func tableView(tableView: UITableView!, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)
         
-        if cell.reuseIdentifier == "Cell" {
+        if cell?.reuseIdentifier == "Cell" {
             self.performSegueWithIdentifier("toGame", sender: nil)
         }
     }
@@ -133,7 +138,7 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
     }
     
     // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return NO if you do not want the specified item to be editable.
         let cell: UITableViewCell? = self.tableView.cellForRowAtIndexPath(indexPath)
         if cell != nil && cell!.reuseIdentifier == "New World Cell" {
@@ -143,7 +148,7 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
     }
 
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the world managed object
             let managedObject:NSManagedObject = fetchedResultController.objectAtIndexPath(indexPath) as NSManagedObject

@@ -55,12 +55,12 @@ class CreateWorldViewController: UIViewController, NSFetchedResultsControllerDel
         }
         
         World.createModel(worldName!, width: 100, height: 100)
-        self.navigationController.popViewControllerAnimated(true)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     // MARK: - CoreData
     func getFetchedResultController() -> NSFetchedResultsController {
-        fetchedResultController = NSFetchedResultsController(fetchRequest: worldFetchRequest(), managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController = NSFetchedResultsController(fetchRequest: worldFetchRequest(), managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
         return fetchedResultController
     }
     

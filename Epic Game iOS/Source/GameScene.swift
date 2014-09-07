@@ -20,7 +20,7 @@ class GameScene: SKScene {
                     worldNameLabel.text = world!.model!.name
                 } else {
                     worldNameLabel.hidden = true
-                    worldNameLabel.text = nil
+                    worldNameLabel.text = ""
                 }
             }
             
@@ -68,7 +68,7 @@ class GameScene: SKScene {
    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-        if (player! != nil) {
+        if (player? != nil) {
             player!.update()
         }
     }

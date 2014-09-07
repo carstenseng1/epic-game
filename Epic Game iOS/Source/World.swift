@@ -34,7 +34,7 @@ class World: SKNode {
         let managedObjectContext:NSManagedObjectContext = appDelegate.managedObjectContext!
         
         let entityDescripition = NSEntityDescription.entityForName("World", inManagedObjectContext: managedObjectContext)
-        let model: WorldModel = WorldModel(entity: entityDescripition, insertIntoManagedObjectContext: managedObjectContext)
+        let model: WorldModel = WorldModel(entity: entityDescripition!, insertIntoManagedObjectContext: managedObjectContext)
         model.name = name
         model.width = width
         model.height = height

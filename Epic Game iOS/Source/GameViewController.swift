@@ -94,23 +94,20 @@ class GameViewController: UIViewController {
     
     func gameScene(gameScene: GameScene, didSetWorld world: World?) {
         if world? != nil && world!.model? != nil {
-            navigationBar?.topItem.title = world!.model!.name
+            navigationBar?.topItem?.title = world!.model!.name
         } else {
-            navigationBar?.topItem.title = "Game Scene"
+            navigationBar?.topItem?.title = "Game Scene"
         }
     }
     
     // MARK: - Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        if segue.identifier? != nil {
-            let identifier: String = segue.identifier
-            switch identifier {
-            case "HUD":
-                hudViewController = segue.destinationViewController as? HUDViewController
-            default:
-                println(identifier)
-            }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier {
+        case "HUD":
+            hudViewController = segue.destinationViewController as? HUDViewController
+        default:
+            println(segue.identifier)
         }
     }
 }
