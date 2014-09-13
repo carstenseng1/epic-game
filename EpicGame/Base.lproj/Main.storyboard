@@ -7,7 +7,7 @@
         <!--Main Menu-->
         <scene sceneID="QPh-Td-0Ig">
             <objects>
-                <viewController id="wyC-hx-EIS" customClass="MainMenuViewController" customModule="Epic_Game_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wyC-hx-EIS" customClass="MainMenuViewController" customModule="EpicGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WNq-ZB-XXz"/>
                         <viewControllerLayoutGuide type="bottom" id="vap-G5-uQ2"/>
@@ -59,7 +59,7 @@
         <!--Create World-->
         <scene sceneID="V26-3k-axP">
             <objects>
-                <viewController id="3tA-OB-qdA" customClass="CreateWorldViewController" customModule="Epic_Game_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3tA-OB-qdA" customClass="CreateWorldViewController" customModule="EpicGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Si1-36-zSU"/>
                         <viewControllerLayoutGuide type="bottom" id="4TV-tY-f5i"/>
@@ -103,7 +103,7 @@
         <!--World Select-->
         <scene sceneID="oc0-Cs-0Jf">
             <objects>
-                <tableViewController id="R1J-ti-Rxo" customClass="WorldSelectTableViewController" customModule="Epic_Game_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="R1J-ti-Rxo" customClass="WorldSelectTableViewController" customModule="EpicGame" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1Is-BH-Cfl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

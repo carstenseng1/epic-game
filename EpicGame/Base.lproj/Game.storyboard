@@ -9,7 +9,7 @@
         <!--Game View Controller-->
         <scene sceneID="O1U-Cz-BGv">
             <objects>
-                <viewController id="bbq-RY-cco" customClass="GameViewController" customModule="Epic_Game_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bbq-RY-cco" customClass="GameViewController" customModule="EpicGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sM7-c0-1Pe"/>
                         <viewControllerLayoutGuide type="bottom" id="gcm-LY-2qY"/>
@@ -100,12 +100,12 @@
         <!--Pause Menu View Controller-->
         <scene sceneID="lbc-Tz-WhG">
             <objects>
-                <viewController id="gFZ-1w-VgV" customClass="PauseMenuViewController" customModule="Epic_Game_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gFZ-1w-VgV" customClass="PauseMenuViewController" customModule="EpicGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g9J-zY-zzD"/>
                         <viewControllerLayoutGuide type="bottom" id="uqH-8V-6hY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="e4g-w2-jAI" customClass="PauseMenuView" customModule="Epic_Game_iOS" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="e4g-w2-jAI" customClass="PauseMenuView" customModule="EpicGame" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -147,7 +147,7 @@
         <!--View Controller-->
         <scene sceneID="Y8x-af-tJf">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="4mE-uw-o71" customClass="HUDViewController" customModule="Epic_Game_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="4mE-uw-o71" customClass="HUDViewController" customModule="EpicGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wHh-9n-EvU"/>
                         <viewControllerLayoutGuide type="bottom" id="Ocj-Ac-eTz"/>
@@ -156,7 +156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHA-Bq-LHl" customClass="MovementTouchView" customModule="Epic_Game_iOS" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHA-Bq-LHl" customClass="MovementTouchView" customModule="EpicGame" customModuleProvider="target">
                                 <rect key="frame" x="16" y="320" width="248" height="260"/>
                                 <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
                             </view>
@@ -196,7 +196,7 @@
         <!--Game Editor Collection View Controller-->
         <scene sceneID="gJH-d7-7fV">
             <objects>
-                <collectionViewController id="KgK-6U-N38" customClass="GameEditorCollectionViewController" customModule="Epic_Game_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="KgK-6U-N38" customClass="GameEditorCollectionViewController" customModule="EpicGame" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fF3-5n-4O5">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="64"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,7 +208,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="1I1-0H-gof" customClass="GameEditorCollectionViewCell" customModule="Epic_Game_iOS" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="1I1-0H-gof" customClass="GameEditorCollectionViewCell" customModule="EpicGame" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -273,8 +273,7 @@
         <!--Title-->
         <scene sceneID="uUQ-uo-CWb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4hU-Pw-Lg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="i4l-O3-CZT" customClass="CreateWorldCellViewController" customModule="Epic_Game_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="i4l-O3-CZT" customClass="CreateWorldCellViewController" customModule="EpicGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hbl-RW-mfl"/>
                         <viewControllerLayoutGuide type="bottom" id="Zn3-Oc-Jbk"/>
@@ -364,6 +363,7 @@
                         <outlet property="nameTextField" destination="f8F-m0-nYh" id="LOo-jA-lnX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4hU-Pw-Lg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4247" y="667"/>
         </scene>

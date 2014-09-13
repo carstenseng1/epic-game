@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4E03DBCE199C72A400A2FDF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E03DBCD199C72A400A2FDF3 /* Images.xcassets */; };
 		4E03DBDA199C72A400A2FDF3 /* Epic_Game_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03DBD9199C72A400A2FDF3 /* Epic_Game_iOSTests.swift */; };
-		4E03DBE5199C731400A2FDF3 /* Music.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E03DBE3199C731400A2FDF3 /* Music.xcassets */; };
-		4E03DBE6199C731400A2FDF3 /* SoundEffects.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E03DBE4199C731400A2FDF3 /* SoundEffects.xcassets */; };
 		4E03DBEB199C75A100A2FDF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03DBE8199C75A100A2FDF3 /* AppDelegate.swift */; };
 		4E03DBEC199C75A100A2FDF3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03DBE9199C75A100A2FDF3 /* GameScene.swift */; };
 		4E03DBED199C75A100A2FDF3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03DBEA199C75A100A2FDF3 /* GameViewController.swift */; };
@@ -18,22 +16,22 @@
 		4E03DBF9199C7BBB00A2FDF3 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03DBF8199C7BBB00A2FDF3 /* MainMenuViewController.swift */; };
 		4E03DBFB199C7BD100A2FDF3 /* PauseMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03DBFA199C7BD100A2FDF3 /* PauseMenuViewController.swift */; };
 		4E1BFBF319BCE3280075C00C /* GameEditorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BFBF219BCE3280075C00C /* GameEditorCollectionViewController.swift */; };
-		4E1BFBF719BCE8030075C00C /* GameEditorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BFBF619BCE8030075C00C /* GameEditorCollectionViewCell.swift */; };
 		4E1BFBFB19BCEA720075C00C /* WorldCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BFBFA19BCEA720075C00C /* WorldCellModel.swift */; };
-		4E1BFBFD19BCF0730075C00C /* CoreDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BFBFC19BCF0730075C00C /* CoreDataExtensions.swift */; };
 		4E1BFC0219BD0EE70075C00C /* CreateWorldCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BFC0119BD0EE70075C00C /* CreateWorldCellViewController.swift */; };
 		4E30B44A19A9941E0032A66B /* MovementTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E30B44919A9941E0032A66B /* MovementTouchView.swift */; };
 		4E52539619A17FEF005C2742 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E52539419A17FEF005C2742 /* World.swift */; };
 		4E52539719A17FEF005C2742 /* WorldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E52539519A17FEF005C2742 /* WorldCell.swift */; };
 		4E52539A19A18020005C2742 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E52539919A18020005C2742 /* UIKitExtensions.swift */; };
 		4E726F0819B3E34C003B0551 /* CreateWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E726F0619B3E34C003B0551 /* CreateWorldViewController.swift */; };
-		4E726F0E19B3EC82003B0551 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E726F0C19B3EC82003B0551 /* Game.storyboard */; };
 		4E7BD77B19A15A50007CBF32 /* EpicGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E7BD77919A15A50007CBF32 /* EpicGame.xcdatamodeld */; };
 		4E7BD78A19A15D2C007CBF32 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7BD78919A15D2C007CBF32 /* Player.swift */; };
 		4E7BD79119A161AB007CBF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E03DBCA199C72A400A2FDF3 /* Main.storyboard */; };
 		4E7C8FAE19B0499C00E008DE /* WorldSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C8FAD19B0499C00E008DE /* WorldSelectTableViewController.swift */; };
 		4E7C8FBA19B1B22100E008DE /* WorldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7C8FB919B1B22100E008DE /* WorldModel.swift */; };
 		4EA987BA19B318E300C0EA61 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA987B919B318E300C0EA61 /* Game.swift */; };
+		4EABCDAC19C4DB7300186900 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EABCDAE19C4DB7300186900 /* Game.storyboard */; };
+		4EABCDB219C4DC0C00186900 /* CoreDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABCDB119C4DC0C00186900 /* CoreDataExtensions.swift */; };
+		4EABCDB419C4DC1E00186900 /* GameEditorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABCDB319C4DC1E00186900 /* GameEditorCollectionViewCell.swift */; };
 		4EB29A1819B42B4300D73722 /* HUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29A1719B42B4300D73722 /* HUDViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,13 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E03DBBD199C72A400A2FDF3 /* Epic Game iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Epic Game iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E03DBBD199C72A400A2FDF3 /* EpicGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EpicGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E03DBCD199C72A400A2FDF3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4E03DBD3199C72A400A2FDF3 /* Epic Game iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Epic Game iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E03DBD3199C72A400A2FDF3 /* EpicGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EpicGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E03DBD8199C72A400A2FDF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E03DBD9199C72A400A2FDF3 /* Epic_Game_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Epic_Game_iOSTests.swift; sourceTree = "<group>"; };
-		4E03DBE3199C731400A2FDF3 /* Music.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Music.xcassets; sourceTree = "<group>"; };
-		4E03DBE4199C731400A2FDF3 /* SoundEffects.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SoundEffects.xcassets; sourceTree = "<group>"; };
 		4E03DBE8199C75A100A2FDF3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = "<group>"; };
 		4E03DBE9199C75A100A2FDF3 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = Source/GameScene.swift; sourceTree = "<group>"; };
 		4E03DBEA199C75A100A2FDF3 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Source/GameViewController.swift; sourceTree = "<group>"; };
@@ -63,17 +59,14 @@
 		4E03DBF8199C7BBB00A2FDF3 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuViewController.swift; path = Source/MainMenuViewController.swift; sourceTree = "<group>"; };
 		4E03DBFA199C7BD100A2FDF3 /* PauseMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PauseMenuViewController.swift; path = Source/PauseMenuViewController.swift; sourceTree = "<group>"; };
 		4E1BFBF219BCE3280075C00C /* GameEditorCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameEditorCollectionViewController.swift; path = Source/GameEditorCollectionViewController.swift; sourceTree = "<group>"; };
-		4E1BFBF619BCE8030075C00C /* GameEditorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEditorCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E1BFBFA19BCEA720075C00C /* WorldCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorldCellModel.swift; path = Source/WorldCellModel.swift; sourceTree = "<group>"; };
-		4E1BFBFC19BCF0730075C00C /* CoreDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataExtensions.swift; sourceTree = "<group>"; };
 		4E1BFC0119BD0EE70075C00C /* CreateWorldCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateWorldCellViewController.swift; path = Source/CreateWorldCellViewController.swift; sourceTree = "<group>"; };
 		4E30B44919A9941E0032A66B /* MovementTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovementTouchView.swift; path = Source/MovementTouchView.swift; sourceTree = "<group>"; };
-		4E52538219A164BD005C2742 /* Epic Game iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Epic Game iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		4E52539419A17FEF005C2742 /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = World.swift; path = Source/World.swift; sourceTree = "<group>"; };
 		4E52539519A17FEF005C2742 /* WorldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorldCell.swift; path = Source/WorldCell.swift; sourceTree = "<group>"; };
 		4E52539919A18020005C2742 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = Source/UIKitExtensions.swift; sourceTree = "<group>"; };
 		4E726F0619B3E34C003B0551 /* CreateWorldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateWorldViewController.swift; path = Source/CreateWorldViewController.swift; sourceTree = "<group>"; };
-		4E726F0D19B3EC82003B0551 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Game.storyboard; sourceTree = "<group>"; };
+		4E73212919C4D70700BB0CA5 /* EpicGame-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EpicGame-Bridging-Header.h"; path = "Source/EpicGame-Bridging-Header.h"; sourceTree = "<group>"; };
 		4E7BD77A19A15A50007CBF32 /* EpicGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EpicGame.xcdatamodel; sourceTree = "<group>"; };
 		4E7BD78919A15D2C007CBF32 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Source/Player.swift; sourceTree = "<group>"; };
 		4E7BD79319A162ED007CBF32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +74,10 @@
 		4E7C8FAD19B0499C00E008DE /* WorldSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorldSelectTableViewController.swift; path = Source/WorldSelectTableViewController.swift; sourceTree = "<group>"; };
 		4E7C8FB919B1B22100E008DE /* WorldModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorldModel.swift; path = Source/WorldModel.swift; sourceTree = "<group>"; };
 		4EA987B919B318E300C0EA61 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = Source/Game.swift; sourceTree = "<group>"; };
+		4EABCDAD19C4DB7300186900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Game.storyboard; sourceTree = "<group>"; };
+		4EABCDB019C4DB8600186900 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Game.strings; sourceTree = "<group>"; };
+		4EABCDB119C4DC0C00186900 /* CoreDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataExtensions.swift; path = Source/CoreDataExtensions.swift; sourceTree = "<group>"; };
+		4EABCDB319C4DC1E00186900 /* GameEditorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameEditorCollectionViewCell.swift; path = Source/GameEditorCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EB29A1719B42B4300D73722 /* HUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUDViewController.swift; path = Source/HUDViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,8 +102,8 @@
 		4E03DBB4199C72A400A2FDF3 = {
 			isa = PBXGroup;
 			children = (
-				4E03DBBF199C72A400A2FDF3 /* Epic Game */,
-				4E03DBD6199C72A400A2FDF3 /* Epic Game iOSTests */,
+				4E03DBBF199C72A400A2FDF3 /* EpicGame */,
+				4E03DBD6199C72A400A2FDF3 /* EpicGameTests */,
 				4E03DBBE199C72A400A2FDF3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,26 +111,22 @@
 		4E03DBBE199C72A400A2FDF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E03DBBD199C72A400A2FDF3 /* Epic Game iOS.app */,
-				4E03DBD3199C72A400A2FDF3 /* Epic Game iOSTests.xctest */,
+				4E03DBBD199C72A400A2FDF3 /* EpicGame.app */,
+				4E03DBD3199C72A400A2FDF3 /* EpicGameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E03DBBF199C72A400A2FDF3 /* Epic Game */ = {
+		4E03DBBF199C72A400A2FDF3 /* EpicGame */ = {
 			isa = PBXGroup;
 			children = (
-				4E52538219A164BD005C2742 /* Epic Game iOS-Bridging-Header.h */,
 				4E03DBCD199C72A400A2FDF3 /* Images.xcassets */,
-				4E03DBE3199C731400A2FDF3 /* Music.xcassets */,
-				4E03DBE4199C731400A2FDF3 /* SoundEffects.xcassets */,
 				4E7BD77919A15A50007CBF32 /* EpicGame.xcdatamodeld */,
 				4E726F0F19B3EC8A003B0551 /* Storyboards */,
 				4E03DBF6199C784B00A2FDF3 /* Source */,
 				4E03DBC0199C72A400A2FDF3 /* Supporting Files */,
 			);
-			name = "Epic Game";
-			path = "Epic Game iOS";
+			path = EpicGame;
 			sourceTree = "<group>";
 		};
 		4E03DBC0199C72A400A2FDF3 /* Supporting Files */ = {
@@ -144,26 +137,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4E03DBD6199C72A400A2FDF3 /* Epic Game iOSTests */ = {
+		4E03DBD6199C72A400A2FDF3 /* EpicGameTests */ = {
 			isa = PBXGroup;
 			children = (
 				4E03DBD9199C72A400A2FDF3 /* Epic_Game_iOSTests.swift */,
-				4E03DBD7199C72A400A2FDF3 /* Supporting Files */,
-			);
-			path = "Epic Game iOSTests";
-			sourceTree = "<group>";
-		};
-		4E03DBD7199C72A400A2FDF3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				4E03DBD8199C72A400A2FDF3 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = EpicGameTests;
 			sourceTree = "<group>";
 		};
 		4E03DBE7199C74E200A2FDF3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4E73212919C4D70700BB0CA5 /* EpicGame-Bridging-Header.h */,
 				4E03DBE8199C75A100A2FDF3 /* AppDelegate.swift */,
 				4EA987B919B318E300C0EA61 /* Game.swift */,
 			);
@@ -173,12 +159,11 @@
 		4E03DBEE199C75D200A2FDF3 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				4E1BFBFE19BD0E6B0075C00C /* Game Editor */,
 				4E03DBEA199C75A100A2FDF3 /* GameViewController.swift */,
 				4E03DBF8199C7BBB00A2FDF3 /* MainMenuViewController.swift */,
+				4E1BFBFE19BD0E6B0075C00C /* Game Editor */,
 				4E30B44819A98B8C0032A66B /* HUD */,
 				4E03DBFC199C80E600A2FDF3 /* Pause Menu */,
-				4E30B44719A870310032A66B /* Views */,
 				4EACD4EF19B260ED005E2649 /* World Select */,
 			);
 			name = "User Interface";
@@ -216,25 +201,18 @@
 		4E1BFBFE19BD0E6B0075C00C /* Game Editor */ = {
 			isa = PBXGroup;
 			children = (
-				4E1BFBF219BCE3280075C00C /* GameEditorCollectionViewController.swift */,
-				4E1BFBF619BCE8030075C00C /* GameEditorCollectionViewCell.swift */,
 				4E1BFC0119BD0EE70075C00C /* CreateWorldCellViewController.swift */,
+				4EABCDB319C4DC1E00186900 /* GameEditorCollectionViewCell.swift */,
+				4E1BFBF219BCE3280075C00C /* GameEditorCollectionViewController.swift */,
 			);
 			name = "Game Editor";
-			sourceTree = "<group>";
-		};
-		4E30B44719A870310032A66B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		4E30B44819A98B8C0032A66B /* HUD */ = {
 			isa = PBXGroup;
 			children = (
-				4E30B44919A9941E0032A66B /* MovementTouchView.swift */,
 				4EB29A1719B42B4300D73722 /* HUDViewController.swift */,
+				4E30B44919A9941E0032A66B /* MovementTouchView.swift */,
 			);
 			name = HUD;
 			sourceTree = "<group>";
@@ -251,8 +229,9 @@
 		4E52538819A165BB005C2742 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				4E7BD78919A15D2C007CBF32 /* Player.swift */,
 				4E52539419A17FEF005C2742 /* World.swift */,
-				4E7BD78419A15C62007CBF32 /* Sprites */,
+				4E52539519A17FEF005C2742 /* WorldCell.swift */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -260,8 +239,8 @@
 		4E52539819A18007005C2742 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4EABCDB119C4DC0C00186900 /* CoreDataExtensions.swift */,
 				4E52539919A18020005C2742 /* UIKitExtensions.swift */,
-				4E1BFBFC19BCF0730075C00C /* CoreDataExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -269,8 +248,8 @@
 		4E726F0F19B3EC8A003B0551 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				4EABCDAE19C4DB7300186900 /* Game.storyboard */,
 				4E03DBCA199C72A400A2FDF3 /* Main.storyboard */,
-				4E726F0C19B3EC82003B0551 /* Game.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -284,20 +263,11 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		4E7BD78419A15C62007CBF32 /* Sprites */ = {
-			isa = PBXGroup;
-			children = (
-				4E52539519A17FEF005C2742 /* WorldCell.swift */,
-				4E7BD78919A15D2C007CBF32 /* Player.swift */,
-			);
-			name = Sprites;
-			sourceTree = "<group>";
-		};
 		4EACD4EF19B260ED005E2649 /* World Select */ = {
 			isa = PBXGroup;
 			children = (
-				4E7C8FAD19B0499C00E008DE /* WorldSelectTableViewController.swift */,
 				4E726F0619B3E34C003B0551 /* CreateWorldViewController.swift */,
+				4E7C8FAD19B0499C00E008DE /* WorldSelectTableViewController.swift */,
 			);
 			name = "World Select";
 			sourceTree = "<group>";
@@ -305,9 +275,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E03DBBC199C72A400A2FDF3 /* Epic Game iOS */ = {
+		4E03DBBC199C72A400A2FDF3 /* EpicGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E03DBDD199C72A400A2FDF3 /* Build configuration list for PBXNativeTarget "Epic Game iOS" */;
+			buildConfigurationList = 4E03DBDD199C72A400A2FDF3 /* Build configuration list for PBXNativeTarget "EpicGame" */;
 			buildPhases = (
 				4E03DBB9199C72A400A2FDF3 /* Sources */,
 				4E03DBBA199C72A400A2FDF3 /* Frameworks */,
@@ -317,14 +287,14 @@
 			);
 			dependencies = (
 			);
-			name = "Epic Game iOS";
-			productName = "Epic Game iOS";
-			productReference = 4E03DBBD199C72A400A2FDF3 /* Epic Game iOS.app */;
+			name = EpicGame;
+			productName = EpicGame;
+			productReference = 4E03DBBD199C72A400A2FDF3 /* EpicGame.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4E03DBD2199C72A400A2FDF3 /* Epic Game iOSTests */ = {
+		4E03DBD2199C72A400A2FDF3 /* EpicGameTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E03DBE0199C72A400A2FDF3 /* Build configuration list for PBXNativeTarget "Epic Game iOSTests" */;
+			buildConfigurationList = 4E03DBE0199C72A400A2FDF3 /* Build configuration list for PBXNativeTarget "EpicGameTests" */;
 			buildPhases = (
 				4E03DBCF199C72A400A2FDF3 /* Sources */,
 				4E03DBD0199C72A400A2FDF3 /* Frameworks */,
@@ -335,9 +305,9 @@
 			dependencies = (
 				4E03DBD5199C72A400A2FDF3 /* PBXTargetDependency */,
 			);
-			name = "Epic Game iOSTests";
-			productName = "Epic Game iOSTests";
-			productReference = 4E03DBD3199C72A400A2FDF3 /* Epic Game iOSTests.xctest */;
+			name = EpicGameTests;
+			productName = EpicGameTests;
+			productReference = 4E03DBD3199C72A400A2FDF3 /* EpicGameTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -358,7 +328,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4E03DBB8199C72A400A2FDF3 /* Build configuration list for PBXProject "Epic Game iOS" */;
+			buildConfigurationList = 4E03DBB8199C72A400A2FDF3 /* Build configuration list for PBXProject "EpicGame" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -371,8 +341,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E03DBBC199C72A400A2FDF3 /* Epic Game iOS */,
-				4E03DBD2199C72A400A2FDF3 /* Epic Game iOSTests */,
+				4E03DBBC199C72A400A2FDF3 /* EpicGame */,
+				4E03DBD2199C72A400A2FDF3 /* EpicGameTests */,
 			);
 		};
 /* End PBXProject section */
@@ -382,12 +352,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EABCDAC19C4DB7300186900 /* Game.storyboard in Resources */,
 				4E7BD79119A161AB007CBF32 /* Main.storyboard in Resources */,
-				4E726F0E19B3EC82003B0551 /* Game.storyboard in Resources */,
 				4E03DBCE199C72A400A2FDF3 /* Images.xcassets in Resources */,
-				4E03DBE5199C731400A2FDF3 /* Music.xcassets in Resources */,
 				4E03DBF5199C776600A2FDF3 /* GameScene.sks in Resources */,
-				4E03DBE6199C731400A2FDF3 /* SoundEffects.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,18 +373,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EABCDB419C4DC1E00186900 /* GameEditorCollectionViewCell.swift in Sources */,
 				4E30B44A19A9941E0032A66B /* MovementTouchView.swift in Sources */,
 				4E7C8FBA19B1B22100E008DE /* WorldModel.swift in Sources */,
 				4E1BFBFB19BCEA720075C00C /* WorldCellModel.swift in Sources */,
 				4E03DBFB199C7BD100A2FDF3 /* PauseMenuViewController.swift in Sources */,
 				4E03DBF9199C7BBB00A2FDF3 /* MainMenuViewController.swift in Sources */,
+				4EABCDB219C4DC0C00186900 /* CoreDataExtensions.swift in Sources */,
 				4E726F0819B3E34C003B0551 /* CreateWorldViewController.swift in Sources */,
 				4E7BD77B19A15A50007CBF32 /* EpicGame.xcdatamodeld in Sources */,
 				4E03DBEC199C75A100A2FDF3 /* GameScene.swift in Sources */,
 				4E52539619A17FEF005C2742 /* World.swift in Sources */,
 				4E52539A19A18020005C2742 /* UIKitExtensions.swift in Sources */,
-				4E1BFBFD19BCF0730075C00C /* CoreDataExtensions.swift in Sources */,
-				4E1BFBF719BCE8030075C00C /* GameEditorCollectionViewCell.swift in Sources */,
 				4E03DBED199C75A100A2FDF3 /* GameViewController.swift in Sources */,
 				4E1BFBF319BCE3280075C00C /* GameEditorCollectionViewController.swift in Sources */,
 				4EB29A1819B42B4300D73722 /* HUDViewController.swift in Sources */,
@@ -442,7 +410,7 @@
 /* Begin PBXTargetDependency section */
 		4E03DBD5199C72A400A2FDF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4E03DBBC199C72A400A2FDF3 /* Epic Game iOS */;
+			target = 4E03DBBC199C72A400A2FDF3 /* EpicGame */;
 			targetProxy = 4E03DBD4199C72A400A2FDF3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -457,10 +425,11 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4E726F0C19B3EC82003B0551 /* Game.storyboard */ = {
+		4EABCDAE19C4DB7300186900 /* Game.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4E726F0D19B3EC82003B0551 /* Base */,
+				4EABCDAD19C4DB7300186900 /* Base */,
+				4EABCDB019C4DB8600186900 /* en */,
 			);
 			name = Game.storyboard;
 			sourceTree = "<group>";
@@ -553,10 +522,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Epic Game iOS/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EpicGame/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Epic Game iOS/Epic Game iOS-Bridging-Header.h";
+				PRODUCT_NAME = EpicGame;
+				SWIFT_OBJC_BRIDGING_HEADER = "EpicGame/Source/EpicGame-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -568,10 +537,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Epic Game iOS/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/EpicGame/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Epic Game iOS/Epic Game iOS-Bridging-Header.h";
+				PRODUCT_NAME = EpicGame;
+				SWIFT_OBJC_BRIDGING_HEADER = "EpicGame/Source/EpicGame-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -588,10 +557,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Epic Game iOSTests/Info.plist";
+				INFOPLIST_FILE = EpicGameTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Epic Game iOS.app/Epic Game iOS";
+				PRODUCT_NAME = EpicGameTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EpicGame.app/EpicGame";
 			};
 			name = Debug;
 		};
@@ -603,17 +572,17 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Epic Game iOSTests/Info.plist";
+				INFOPLIST_FILE = EpicGameTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Epic Game iOS.app/Epic Game iOS";
+				PRODUCT_NAME = EpicGameTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EpicGame.app/EpicGame";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E03DBB8199C72A400A2FDF3 /* Build configuration list for PBXProject "Epic Game iOS" */ = {
+		4E03DBB8199C72A400A2FDF3 /* Build configuration list for PBXProject "EpicGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E03DBDB199C72A400A2FDF3 /* Debug */,
@@ -622,7 +591,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E03DBDD199C72A400A2FDF3 /* Build configuration list for PBXNativeTarget "Epic Game iOS" */ = {
+		4E03DBDD199C72A400A2FDF3 /* Build configuration list for PBXNativeTarget "EpicGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E03DBDE199C72A400A2FDF3 /* Debug */,
@@ -631,7 +600,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E03DBE0199C72A400A2FDF3 /* Build configuration list for PBXNativeTarget "Epic Game iOSTests" */ = {
+		4E03DBE0199C72A400A2FDF3 /* Build configuration list for PBXNativeTarget "EpicGameTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E03DBE1199C72A400A2FDF3 /* Debug */,

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4E03DBBC199C72A400A2FDF3"
-               BuildableName = "Epic Game iOS.app"
-               BlueprintName = "Epic Game iOS"
-               ReferencedContainer = "container:Epic Game iOS.xcodeproj">
+               BuildableName = "EpicGame.app"
+               BlueprintName = "EpicGame"
+               ReferencedContainer = "container:EpicGame.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4E03DBD2199C72A400A2FDF3"
-               BuildableName = "Epic Game iOSTests.xctest"
-               BlueprintName = "Epic Game iOSTests"
-               ReferencedContainer = "container:Epic Game iOS.xcodeproj">
+               BuildableName = "EpicGameTests.xctest"
+               BlueprintName = "EpicGameTests"
+               ReferencedContainer = "container:EpicGame.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4E03DBD2199C72A400A2FDF3"
-               BuildableName = "Epic Game iOSTests.xctest"
-               BlueprintName = "Epic Game iOSTests"
-               ReferencedContainer = "container:Epic Game iOS.xcodeproj">
+               BuildableName = "EpicGameTests.xctest"
+               BlueprintName = "EpicGameTests"
+               ReferencedContainer = "container:EpicGame.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E03DBBC199C72A400A2FDF3"
-            BuildableName = "Epic Game iOS.app"
-            BlueprintName = "Epic Game iOS"
-            ReferencedContainer = "container:Epic Game iOS.xcodeproj">
+            BuildableName = "EpicGame.app"
+            BlueprintName = "EpicGame"
+            ReferencedContainer = "container:EpicGame.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E03DBBC199C72A400A2FDF3"
-            BuildableName = "Epic Game iOS.app"
-            BlueprintName = "Epic Game iOS"
-            ReferencedContainer = "container:Epic Game iOS.xcodeproj">
+            BuildableName = "EpicGame.app"
+            BlueprintName = "EpicGame"
+            ReferencedContainer = "container:EpicGame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E03DBBC199C72A400A2FDF3"
-            BuildableName = "Epic Game iOS.app"
-            BlueprintName = "Epic Game iOS"
-            ReferencedContainer = "container:Epic Game iOS.xcodeproj">
+            BuildableName = "EpicGame.app"
+            BlueprintName = "EpicGame"
+            ReferencedContainer = "container:EpicGame.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

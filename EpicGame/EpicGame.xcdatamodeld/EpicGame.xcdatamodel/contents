@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6220.17" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Player" representedClassName="Epic_Game_iOS.PlayerModel" syncable="YES">
+    <entity name="Player" representedClassName="EpicGame.PlayerModel" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="World" representedClassName="Epic_Game_iOS.WorldModel" syncable="YES">
+    <entity name="World" representedClassName="EpicGame.WorldModel" syncable="YES">
         <attribute name="cells" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="width" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="WorldCell" representedClassName="Epic_Game_iOS.WorldCellModel" syncable="YES">
+    <entity name="WorldCell" representedClassName="EpicGame.WorldCellModel" syncable="YES">
         <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Player" positionX="-63" positionY="-18" width="128" height="58"/>
-        <element name="World" positionX="-63" positionY="-9" width="128" height="103"/>
+        <element name="Player" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="World" positionX="-63" positionY="-9" width="128" height="105"/>
         <element name="WorldCell" positionX="-63" positionY="-9" width="128" height="75"/>
     </elements>
 </model>

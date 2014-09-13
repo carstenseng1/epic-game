@@ -1,0 +1,27 @@
+
+/* Class = "IBUINavigationItem"; title = "Title"; ObjectID = "85G-U6-KrO"; */
+"85G-U6-KrO.title" = "Title";
+
+/* Class = "IBUIBarButtonItem"; title = "Cells"; ObjectID = "9gX-Q1-AOC"; */
+"9gX-Q1-AOC.title" = "Cells";
+
+/* Class = "IBUIButton"; normalTitle = "Quit"; ObjectID = "S1H-bw-L4n"; */
+"S1H-bw-L4n.normalTitle" = "Quit";
+
+/* Class = "IBUITextField"; placeholder = "Image Name"; ObjectID = "U4u-Qu-gg6"; */
+"U4u-Qu-gg6.placeholder" = "Image Name";
+
+/* Class = "IBUITextField"; placeholder = "Name"; ObjectID = "f8F-m0-nYh"; */
+"f8F-m0-nYh.placeholder" = "Name";
+
+/* Class = "IBUIButton"; normalTitle = "Pause"; ObjectID = "jJO-43-7dB"; */
+"jJO-43-7dB.normalTitle" = "Pause";
+
+/* Class = "IBUINavigationItem"; title = "Title"; ObjectID = "l1z-ql-SA2"; */
+"l1z-ql-SA2.title" = "Title";
+
+/* Class = "IBUIButton"; normalTitle = "Resume"; ObjectID = "mLg-WV-BHy"; */
+"mLg-WV-BHy.normalTitle" = "Resume";
+
+/* Class = "IBUINavigationItem"; title = "Create Cell"; ObjectID = "sil-y3-E09"; */
+"sil-y3-E09.title" = "Create Cell";
