@@ -7,7 +7,27 @@
 //
 
 import SpriteKit
+import CoreData
 
 class WorldCell: SKSpriteNode {
-   
+    var model: WorldCellModel? = nil
+    
+    convenience init(model: WorldCellModel) {
+        self.init()
+        self.model! = model
+    }
+    
+    class func createModel(name: String, imageName: String) -> WorldCellModel {
+        let appDelegate:AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let managedObjectContext:NSManagedObjectContext = appDelegate.managedObjectContext!
+        
+        let entityDescripition = NSEntityDescription.entityForName("WorldCell", inManagedObjectContext: managedObjectContext)!
+        let model: WorldCellModel = WorldCellModel(entity: entityDescripition, insertIntoManagedObjectContext: managedObjectContext)
+        model.name = name
+        model.imageName = imageName
+        
+        managedObjectContext.save(nil)
+        
+        return model
+    }
 }

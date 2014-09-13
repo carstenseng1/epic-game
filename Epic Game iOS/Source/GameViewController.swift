@@ -103,11 +103,9 @@ class GameViewController: UIViewController {
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        switch segue.identifier {
-        case "HUD":
-            hudViewController = segue.destinationViewController as? HUDViewController
-        default:
-            println(segue.identifier)
+        if segue.identifier == "HUD" {
+            let viewController = segue.destinationViewController as HUDViewController
+            hudViewController = viewController
         }
     }
 }

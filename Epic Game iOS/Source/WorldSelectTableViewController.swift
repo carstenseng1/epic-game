@@ -20,8 +20,9 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        
+        // If in Edit Mode...
+        // Display an Edit button in the navigation bar for this view controller.
         if Game.sharedInstance.mode == GameMode.Edit {
             self.navigationItem.rightBarButtonItem = self.editButtonItem()
         }
@@ -53,33 +54,45 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
         fetchRequest.sortDescriptors = [sortDescriptor]
         return fetchRequest
     }
+    
+    func numberOfWorlds(section: Int) -> Int {
+        let sectionInfo: NSFetchedResultsSectionInfo = fetchedResultController.sections?[section] as NSFetchedResultsSectionInfo
+        return sectionInfo.numberOfObjects
+    }
+    
+    func worldAtIndexPath(indexPath: NSIndexPath) -> WorldModel {
+        return fetchedResultController.objectAtIndexPath(indexPath) as WorldModel
+    }
+    
+    func deleteWorld(indexPath: NSIndexPath) {
+        let managedObject:NSManagedObject = fetchedResultController.objectAtIndexPath(indexPath) as NSManagedObject
+        managedObjectContext?.deleteObject(managedObject)
+        managedObjectContext?.save(nil)
+    }
 
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // Return the number of sections.
-        if (fetchedResultController.sections? != nil) {
-            let sections = fetchedResultController.sections!
-            return sections.count
-        }
-        return 0
+        // Return the number of sections on the fetched results controller for worlds.
+        return fetchedResultController.numberOfSections
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        // Number of world models saved plus a cell to create a new world
-        let sectionInfo: NSFetchedResultsSectionInfo = fetchedResultController.sections?[section] as NSFetchedResultsSectionInfo
-        let numberOfWorlds = sectionInfo.numberOfObjects
+        let numberOfWorlds: Int = self.numberOfWorlds(section)
+        
+        // Update edit button based on game mode and number of worlds
         self.editButtonItem().enabled = self.editing || numberOfWorlds > 0
         
+        // Return value based on game mode
         switch Game.sharedInstance.mode {
         case GameMode.Play:
             return numberOfWorlds
         case GameMode.Edit:
             if tableView.editing {
+                // Return number of world models
                 return numberOfWorlds
             } else {
+                // Return number of world models saved plus a cell to create a new world
                 return numberOfWorlds + 1
             }
         default:
@@ -92,12 +105,11 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
         var text: String = ""
         
         // Configure the cell...
-        let sectionInfo: NSFetchedResultsSectionInfo = fetchedResultController.sections?[indexPath.section] as NSFetchedResultsSectionInfo
-        if indexPath.row == sectionInfo.numberOfObjects {
+        if indexPath.row == numberOfWorlds(indexPath.section) {
             reuseIdentifier = "New World Cell"
             text = "Create New (Empty World)"
         } else {
-            let worldModel = fetchedResultController.objectAtIndexPath(indexPath) as WorldModel
+            let worldModel = worldAtIndexPath(indexPath)
             text = worldModel.name
         }
         
@@ -113,7 +125,7 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
         if cell.reuseIdentifier == "New World Cell" {
             self.performSegueWithIdentifier("toCreateWorld", sender: cell)
         } else {
-            let worldModel = fetchedResultController.objectAtIndexPath(indexPath) as WorldModel
+            let worldModel = worldAtIndexPath(indexPath)
             let world = World(model: worldModel)
             println("world model: \(worldModel)")
             Game.sharedInstance.loadGame(worldModel)
@@ -151,9 +163,7 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the world managed object
-            let managedObject:NSManagedObject = fetchedResultController.objectAtIndexPath(indexPath) as NSManagedObject
-            managedObjectContext?.deleteObject(managedObject)
-            managedObjectContext?.save(nil)
+            deleteWorld(indexPath)
             
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

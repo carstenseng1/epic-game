@@ -33,10 +33,11 @@ class Game: NSObject {
     }
     
     func loadGame(worldModel: WorldModel) {
-        let gameStoryboard = UIStoryboard(name: "Game", bundle: nil)
-        gameViewController = gameStoryboard.instantiateInitialViewController() as? GameViewController
-        gameViewController?.gameScene.world = World(model: worldModel)
+        let storyboard = UIStoryboard(name: "Game", bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController() as GameViewController
+        viewController.gameScene.world = World(model: worldModel)
         
-        UIApplication.sharedApplication().keyWindow.rootViewController = gameViewController;
+        UIApplication.sharedApplication().keyWindow.rootViewController = viewController;
+        gameViewController = viewController
     }
 }
