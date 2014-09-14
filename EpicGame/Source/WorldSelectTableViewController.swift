@@ -55,6 +55,10 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
         return fetchRequest
     }
     
+    func controllerDidChangeContent(controller: NSFetchedResultsController!) {
+        tableView.reloadData()
+    }
+    
     func numberOfWorlds(section: Int) -> Int {
         let sectionInfo: NSFetchedResultsSectionInfo = fetchedResultController.sections?[section] as NSFetchedResultsSectionInfo
         return sectionInfo.numberOfObjects
@@ -138,10 +142,6 @@ class WorldSelectTableViewController: UITableViewController, NSFetchedResultsCon
         if cell?.reuseIdentifier == "Cell" {
             self.performSegueWithIdentifier("toGame", sender: nil)
         }
-    }
-    
-    func controllerDidChangeContent(controller: NSFetchedResultsController!) {
-        tableView.reloadData()
     }
     
     override func setEditing(editing: Bool, animated: Bool) {

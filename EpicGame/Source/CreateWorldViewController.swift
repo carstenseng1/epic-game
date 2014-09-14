@@ -48,7 +48,7 @@ class CreateWorldViewController: UIViewController, NSFetchedResultsControllerDel
     
     // MARK: - IBActions
     
-    @IBAction func doneAction(AnyObject) {
+    @IBAction func saveAction() {
         var worldName: NSString? = self.worldNameTextField?.text
         if worldName == nil || worldName!.isEqualToString("") {
             worldName = "New World"

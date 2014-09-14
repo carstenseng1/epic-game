@@ -1,5 +1,5 @@
 //
-//  EditorCollectionViewController.swift
+//  EditorLibraryViewController.swift
 //  Epic Game iOS
 //
 //  Created by Garret Carstensen on 9/7/14.
@@ -9,7 +9,14 @@
 import UIKit
 import CoreData
 
-class EditorCollectionViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
+protocol EditorLibraryDelegate: class {
+    func editorLibraryDidSelectWorldCellModel(model: WorldCellModel)
+    func editorLibraryDidSelectNewWorldCellModel()
+}
+
+class EditorLibraryViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
+    
+    weak var delegate: EditorLibraryDelegate?
     
     let itemCellIdentifier = "Cell"
     let addCellIdentifier = "Add"
@@ -24,7 +31,7 @@ class EditorCollectionViewController: UICollectionViewController, NSFetchedResul
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView?.registerClass(EditorCollectionViewCell.self, forCellWithReuseIdentifier: itemCellIdentifier)
+//        self.collectionView?.registerClass(EditorLibraryCell.self, forCellWithReuseIdentifier: itemCellIdentifier)
 
         // Fetch existing world models
         fetchedResultController = getFetchedResultController()
@@ -48,6 +55,10 @@ class EditorCollectionViewController: UICollectionViewController, NSFetchedResul
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         return fetchRequest
+    }
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController!) {
+        collectionView?.reloadData()
     }
     
     func numberOfWorldCells(section: Int) -> Int {
@@ -88,9 +99,12 @@ class EditorCollectionViewController: UICollectionViewController, NSFetchedResul
     
         // Configure the cell
         if reuseIdentifier == itemCellIdentifier {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as EditorCollectionViewCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as EditorLibraryCell
+            
             let worldCellModel = worldCellAtIndexPath(indexPath)
             println("cell: name: \(worldCellModel.name), imageName: \(worldCellModel.imageName)")
+            
+            cell.nameLabel?.text = worldCellModel.name
             
             var image: UIImage? = UIImage(named: worldCellModel.imageName)
             if image != nil {
@@ -113,14 +127,16 @@ class EditorCollectionViewController: UICollectionViewController, NSFetchedResul
         let reuseIdentifier = collectionView.cellForItemAtIndexPath(indexPath)?.reuseIdentifier
         if reuseIdentifier == itemCellIdentifier {
             let worldCellModel = worldCellAtIndexPath(indexPath)
-            println("Sected world cell: \(worldCellModel.name)")
+            println("Selected world cell: \(worldCellModel.name)")
             
             // Delete the world cell, re-fetch world cell models, then reload the collection view
             deleteWorldCell(indexPath)
             fetchedResultController.performFetch(nil)
-            collectionView.reloadData()
         } else if reuseIdentifier == addCellIdentifier {
-            // TODO: Notify delegate
+            // Notify delegate
+            if delegate != nil {
+                delegate!.editorLibraryDidSelectNewWorldCellModel()
+            }
         }
     }
     
@@ -152,5 +168,4 @@ class EditorCollectionViewController: UICollectionViewController, NSFetchedResul
     
     }
     */
-
 }

@@ -39,7 +39,7 @@ class CreateWorldCellViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField?
     @IBOutlet var imageNameTextField: UITextField?
     
-    @IBAction func doneAction(AnyObject) {
+    @IBAction func saveAction() {
         var worldCellName = ""
         if nameTextField != nil {
             worldCellName = nameTextField!.text
@@ -54,9 +54,7 @@ class CreateWorldCellViewController: UIViewController {
         }
         
         WorldCell.createModel(worldCellName, imageName: imageName)
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
-            
-        })
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     // MARK: - CoreData

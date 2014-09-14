@@ -15,7 +15,7 @@
 		4E03DBF5199C776600A2FDF3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4E03DBF4199C776600A2FDF3 /* GameScene.sks */; };
 		4E03DBF9199C7BBB00A2FDF3 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03DBF8199C7BBB00A2FDF3 /* MainMenuViewController.swift */; };
 		4E03DBFB199C7BD100A2FDF3 /* PauseMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03DBFA199C7BD100A2FDF3 /* PauseMenuViewController.swift */; };
-		4E1BFBF319BCE3280075C00C /* EditorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BFBF219BCE3280075C00C /* EditorCollectionViewController.swift */; };
+		4E1BFBF319BCE3280075C00C /* EditorLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BFBF219BCE3280075C00C /* EditorLibraryViewController.swift */; };
 		4E1BFBFB19BCEA720075C00C /* WorldCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BFBFA19BCEA720075C00C /* WorldCellModel.swift */; };
 		4E1BFC0219BD0EE70075C00C /* CreateWorldCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BFC0119BD0EE70075C00C /* CreateWorldCellViewController.swift */; };
 		4E30B44A19A9941E0032A66B /* MovementTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E30B44919A9941E0032A66B /* MovementTouchView.swift */; };
@@ -31,7 +31,7 @@
 		4EA987BA19B318E300C0EA61 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA987B919B318E300C0EA61 /* Game.swift */; };
 		4EABCDAC19C4DB7300186900 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EABCDAE19C4DB7300186900 /* Game.storyboard */; };
 		4EABCDB219C4DC0C00186900 /* CoreDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABCDB119C4DC0C00186900 /* CoreDataExtensions.swift */; };
-		4EABCDB419C4DC1E00186900 /* EditorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABCDB319C4DC1E00186900 /* EditorCollectionViewCell.swift */; };
+		4EABCDB419C4DC1E00186900 /* EditorLibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABCDB319C4DC1E00186900 /* EditorLibraryCell.swift */; };
 		4EB29A1819B42B4300D73722 /* HUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29A1719B42B4300D73722 /* HUDViewController.swift */; };
 		4EF4D61E19C4E6CE00E9808D /* Editor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EF4D62019C4E6CE00E9808D /* Editor.storyboard */; };
 		4EF4D62419C4E70900E9808D /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF4D62319C4E70900E9808D /* EditorViewController.swift */; };
@@ -60,7 +60,7 @@
 		4E03DBF4199C776600A2FDF3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = Source/GameScene.sks; sourceTree = "<group>"; };
 		4E03DBF8199C7BBB00A2FDF3 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuViewController.swift; path = Source/MainMenuViewController.swift; sourceTree = "<group>"; };
 		4E03DBFA199C7BD100A2FDF3 /* PauseMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PauseMenuViewController.swift; path = Source/PauseMenuViewController.swift; sourceTree = "<group>"; };
-		4E1BFBF219BCE3280075C00C /* EditorCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorCollectionViewController.swift; path = Source/EditorCollectionViewController.swift; sourceTree = "<group>"; };
+		4E1BFBF219BCE3280075C00C /* EditorLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorLibraryViewController.swift; path = Source/EditorLibraryViewController.swift; sourceTree = "<group>"; };
 		4E1BFBFA19BCEA720075C00C /* WorldCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorldCellModel.swift; path = Source/WorldCellModel.swift; sourceTree = "<group>"; };
 		4E1BFC0119BD0EE70075C00C /* CreateWorldCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateWorldCellViewController.swift; path = Source/CreateWorldCellViewController.swift; sourceTree = "<group>"; };
 		4E30B44919A9941E0032A66B /* MovementTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovementTouchView.swift; path = Source/MovementTouchView.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		4EABCDAD19C4DB7300186900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Game.storyboard; sourceTree = "<group>"; };
 		4EABCDB019C4DB8600186900 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Game.strings; sourceTree = "<group>"; };
 		4EABCDB119C4DC0C00186900 /* CoreDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataExtensions.swift; path = Source/CoreDataExtensions.swift; sourceTree = "<group>"; };
-		4EABCDB319C4DC1E00186900 /* EditorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorCollectionViewCell.swift; path = Source/EditorCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EABCDB319C4DC1E00186900 /* EditorLibraryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorLibraryCell.swift; path = Source/EditorLibraryCell.swift; sourceTree = "<group>"; };
 		4EB29A1719B42B4300D73722 /* HUDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUDViewController.swift; path = Source/HUDViewController.swift; sourceTree = "<group>"; };
 		4EF4D61F19C4E6CE00E9808D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Editor.storyboard; sourceTree = "<group>"; };
 		4EF4D62219C4E6D200E9808D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Editor.strings; sourceTree = "<group>"; };
@@ -204,8 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				4E1BFC0119BD0EE70075C00C /* CreateWorldCellViewController.swift */,
-				4EABCDB319C4DC1E00186900 /* EditorCollectionViewCell.swift */,
-				4E1BFBF219BCE3280075C00C /* EditorCollectionViewController.swift */,
+				4EABCDB319C4DC1E00186900 /* EditorLibraryCell.swift */,
+				4E1BFBF219BCE3280075C00C /* EditorLibraryViewController.swift */,
 				4EF4D62319C4E70900E9808D /* EditorViewController.swift */,
 			);
 			name = "Game Editor";
@@ -397,7 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EABCDB419C4DC1E00186900 /* EditorCollectionViewCell.swift in Sources */,
+				4EABCDB419C4DC1E00186900 /* EditorLibraryCell.swift in Sources */,
 				4E30B44A19A9941E0032A66B /* MovementTouchView.swift in Sources */,
 				4E7C8FBA19B1B22100E008DE /* WorldModel.swift in Sources */,
 				4E1BFBFB19BCEA720075C00C /* WorldCellModel.swift in Sources */,
@@ -411,7 +411,7 @@
 				4E52539619A17FEF005C2742 /* World.swift in Sources */,
 				4E52539A19A18020005C2742 /* UIKitExtensions.swift in Sources */,
 				4E03DBED199C75A100A2FDF3 /* GameViewController.swift in Sources */,
-				4E1BFBF319BCE3280075C00C /* EditorCollectionViewController.swift in Sources */,
+				4E1BFBF319BCE3280075C00C /* EditorLibraryViewController.swift in Sources */,
 				4EB29A1819B42B4300D73722 /* HUDViewController.swift in Sources */,
 				4E7BD78A19A15D2C007CBF32 /* Player.swift in Sources */,
 				4E52539719A17FEF005C2742 /* WorldCell.swift in Sources */,

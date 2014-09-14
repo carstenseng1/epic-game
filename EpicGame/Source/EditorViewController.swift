@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class EditorViewController: UIViewController {
+class EditorViewController: UIViewController, EditorLibraryDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,20 +53,31 @@ class EditorViewController: UIViewController {
         }
     }
     
+    // MARK: - EditorLibraryDelegate
+    func editorLibraryDidSelectWorldCellModel(model: WorldCellModel) {
+        
+    }
+    
+    func editorLibraryDidSelectNewWorldCellModel() {
+        self.performSegueWithIdentifier("toCreateWorldCell", sender: nil)
+    }
+    
     // MARK: - Interface Builder
     
     @IBAction func quitAction() {
         Game.sharedInstance.quit()
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "embedLibrary" {
+            let library = segue.destinationViewController as EditorLibraryViewController
+            library.delegate = self
+        }
     }
-    */
 
 }
