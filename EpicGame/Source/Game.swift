@@ -33,11 +33,25 @@ class Game: NSObject {
     }
     
     func loadGame(worldModel: WorldModel) {
-        let storyboard = UIStoryboard(name: "Game", bundle: nil)
-        let viewController = storyboard.instantiateInitialViewController() as GameViewController
-        viewController.gameScene.world = World(model: worldModel)
+        var viewController: UIViewController? = nil
         
-        UIApplication.sharedApplication().keyWindow.rootViewController = viewController;
-        gameViewController = viewController
+        switch self.mode {
+        case GameMode.Play:
+            let storyboard = UIStoryboard(name: "Game", bundle: nil)
+            gameViewController = storyboard.instantiateInitialViewController() as? GameViewController
+            if gameViewController != nil {
+                gameViewController!.gameScene.world = World(model: worldModel)
+                viewController = gameViewController
+            }
+        case GameMode.Edit:
+            let storyboard = UIStoryboard(name: "Editor", bundle: nil)
+            viewController = storyboard.instantiateInitialViewController() as? UIViewController
+        default:
+            println("Invalid game mode")
+        }
+        
+        if viewController != nil {
+            UIApplication.sharedApplication().keyWindow.rootViewController = viewController
+        }
     }
 }

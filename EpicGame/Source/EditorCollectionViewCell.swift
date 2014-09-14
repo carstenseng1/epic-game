@@ -1,5 +1,5 @@
 //
-//  GameEditorCollectionViewCell.swift
+//  EditorCollectionViewCell.swift
 //  Epic Game iOS
 //
 //  Created by Garret Carstensen on 9/7/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameEditorCollectionViewCell: UICollectionViewCell {
+class EditorCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView?
     

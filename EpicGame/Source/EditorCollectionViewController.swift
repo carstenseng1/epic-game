@@ -1,5 +1,5 @@
 //
-//  GameEditorCollectionViewController.swift
+//  EditorCollectionViewController.swift
 //  Epic Game iOS
 //
 //  Created by Garret Carstensen on 9/7/14.
@@ -9,10 +9,10 @@
 import UIKit
 import CoreData
 
-let reuseIdentifier = "Cell"
-
-class GameEditorCollectionViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
-    var worlds: [NSString] = []
+class EditorCollectionViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
+    
+    let itemCellIdentifier = "Cell"
+    let addCellIdentifier = "Add"
     
     let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
@@ -24,7 +24,7 @@ class GameEditorCollectionViewController: UICollectionViewController, NSFetchedR
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView?.registerClass(GameEditorCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView?.registerClass(EditorCollectionViewCell.self, forCellWithReuseIdentifier: itemCellIdentifier)
 
         // Fetch existing world models
         fetchedResultController = getFetchedResultController()
@@ -65,28 +65,19 @@ class GameEditorCollectionViewController: UICollectionViewController, NSFetchedR
         managedObjectContext?.save(nil)
     }
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    
     // MARK: UICollectionViewDataSource
     func collectionViewCellResuseIdentifier(indexPath: NSIndexPath) -> String {
         if indexPath.row == numberOfWorldCells(indexPath.section) {
-            return "Add"
+            return addCellIdentifier
         } else {
-            return "Cell"
+            return itemCellIdentifier
         }
     }
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return fetchedResultController.numberOfSections
     }
-
-
+    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // Return number of world cell models saved plus a cell to create a new one
         return self.numberOfWorldCells(section) + 1
@@ -94,11 +85,10 @@ class GameEditorCollectionViewController: UICollectionViewController, NSFetchedR
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let reuseIdentifier = collectionViewCellResuseIdentifier(indexPath)
-        
     
         // Configure the cell
-        if reuseIdentifier == "Cell" {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as GameEditorCollectionViewCell
+        if reuseIdentifier == itemCellIdentifier {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as EditorCollectionViewCell
             let worldCellModel = worldCellAtIndexPath(indexPath)
             println("cell: name: \(worldCellModel.name), imageName: \(worldCellModel.imageName)")
             
@@ -121,7 +111,7 @@ class GameEditorCollectionViewController: UICollectionViewController, NSFetchedR
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let reuseIdentifier = collectionView.cellForItemAtIndexPath(indexPath)?.reuseIdentifier
-        if reuseIdentifier == "Cell" {
+        if reuseIdentifier == itemCellIdentifier {
             let worldCellModel = worldCellAtIndexPath(indexPath)
             println("Sected world cell: \(worldCellModel.name)")
             
@@ -129,8 +119,8 @@ class GameEditorCollectionViewController: UICollectionViewController, NSFetchedR
             deleteWorldCell(indexPath)
             fetchedResultController.performFetch(nil)
             collectionView.reloadData()
-        } else if reuseIdentifier == "Add" {
-            self.performSegueWithIdentifier("toCreateCell", sender: self)
+        } else if reuseIdentifier == addCellIdentifier {
+            // TODO: Notify delegate
         }
     }
     

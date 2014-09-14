@@ -1,16 +1,16 @@
 //
-//  GameViewController.swift
-//  Epic Game iOS
+//  EditorViewController.swift
+//  EpicGame
 //
-//  Created by Garret Carstensen on 8/13/14.
+//  Created by Garret Carstensen on 9/13/14.
 //  Copyright (c) 2014 Garret Carstensen. All rights reserved.
 //
 
 import UIKit
 import SpriteKit
 
-class GameViewController: UIViewController {
-    
+class EditorViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,30 +33,14 @@ class GameViewController: UIViewController {
         skView.presentScene(scene)
     }
 
-    override func shouldAutorotate() -> Bool {
-        return true
-    }
-
-    override func supportedInterfaceOrientations() -> Int {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return Int(UIInterfaceOrientationMask.AllButUpsideDown.toRaw())
-        } else {
-            return Int(UIInterfaceOrientationMask.All.toRaw())
-        }
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-
-    override func prefersStatusBarHidden() -> Bool {
-        return true
+        // Dispose of any resources that can be recreated.
     }
     
     var gameScene: GameScene {
         let skView = self.view as SKView
-        return skView.scene as GameScene
+            return skView.scene as GameScene
     }
     
     // MARK: - GameSceneDelegate
@@ -70,14 +54,19 @@ class GameViewController: UIViewController {
     }
     
     // MARK: - Interface Builder
-    weak var hudViewController: HUDViewController?
     
-    // MARK: - Navigation
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "HUD" {
-            let viewController = segue.destinationViewController as HUDViewController
-            hudViewController = viewController
-        }
+    @IBAction func quitAction() {
+        Game.sharedInstance.quit()
     }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
